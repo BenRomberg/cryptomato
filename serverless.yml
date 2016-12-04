@@ -51,16 +51,15 @@ package:
 
 functions:
   hello:
-    handler: com.benromberg.cryptomato.Handler
+    handler: com.benromberg.cryptomato.RequestHandler
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
     events:
       - http:
-          path: users/hello
-          method: get
-          integration: lambda
+          path: sample/{proxy+}
+          method: any
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
