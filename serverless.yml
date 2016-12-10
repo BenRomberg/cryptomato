@@ -21,6 +21,7 @@ provider:
   name: aws
   runtime: java8
   memorySize: 512
+  timeout: 60
 
 # you can overwrite defaults here
 #  stage: dev
@@ -58,7 +59,7 @@ functions:
 #    Check the event documentation for details
     events:
       - http:
-          path: sample/{proxy+}
+          path: /{proxy+}
           method: any
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
