@@ -1,6 +1,5 @@
 package com.benromberg.cryptomato.web;
 
-import com.benromberg.cryptomato.RequestHandler;
 import com.benromberg.cryptomato.web.view.ColdstartResponse;
 import com.benromberg.cryptomato.web.view.TimestampTokenRequest;
 import com.benromberg.cryptomato.web.view.TimestampTokenResponse;
@@ -20,12 +19,12 @@ public class CryptomatoResourceTest extends JerseyTest {
 
     @Override
     protected Application configure() {
-        return RequestHandler.getResourceConfig();
+        return new JerseyResourceConfig();
     }
 
     @Override
     protected void configureClient(ClientConfig config) {
-        config.register(RequestHandler.createJsonProvider());
+        config.register(JerseyResourceConfig.createJsonProvider());
     }
 
     @Test
