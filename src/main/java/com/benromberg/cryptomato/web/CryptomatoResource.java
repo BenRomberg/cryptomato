@@ -1,5 +1,9 @@
-package com.benromberg.cryptomato;
+package com.benromberg.cryptomato.web;
 
+import com.benromberg.cryptomato.core.TrustedTimestampProvider;
+import com.benromberg.cryptomato.web.view.ColdstartResponse;
+import com.benromberg.cryptomato.web.view.TimestampTokenRequest;
+import com.benromberg.cryptomato.web.view.TimestampTokenResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

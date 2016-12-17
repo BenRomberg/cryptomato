@@ -1,9 +1,9 @@
-package com.benromberg.cryptomato;
-
-import java.time.LocalDateTime;
+package com.benromberg.cryptomato.web.view;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.LocalDateTime;
 
 public class TimestampTokenResponse {
     @JsonProperty

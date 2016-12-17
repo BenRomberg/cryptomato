@@ -1,5 +1,19 @@
-package com.benromberg.cryptomato;
+package com.benromberg.cryptomato.core;
 
+import com.benromberg.cryptomato.web.view.TimestampTokenResponse;
+import org.bouncycastle.asn1.ASN1InputStream;
+import org.bouncycastle.asn1.tsp.TimeStampResp;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.tsp.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.net.HttpURLConnection;
@@ -11,24 +25,6 @@ import java.security.Security;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Base64;
-
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-
-import org.bouncycastle.asn1.ASN1InputStream;
-import org.bouncycastle.asn1.tsp.TimeStampResp;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.tsp.TSPAlgorithms;
-import org.bouncycastle.tsp.TimeStampRequest;
-import org.bouncycastle.tsp.TimeStampRequestGenerator;
-import org.bouncycastle.tsp.TimeStampResponse;
-import org.bouncycastle.tsp.TimeStampToken;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class TrustedTimestampProvider {
     private static final String TSA_URL = "https://freetsa.org/tsr";

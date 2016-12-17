@@ -1,4 +1,4 @@
-package com.benromberg.cryptomato;
+package com.benromberg.cryptomato.core;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Base64;
 
+import com.benromberg.cryptomato.core.TrustedTimestampProvider;
+import com.benromberg.cryptomato.web.view.TimestampTokenResponse;
 import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cms.CMSSignedData;
 import org.bouncycastle.cms.DefaultCMSSignatureAlgorithmNameGenerator;

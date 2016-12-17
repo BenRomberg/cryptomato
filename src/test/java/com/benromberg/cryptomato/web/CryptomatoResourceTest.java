@@ -1,5 +1,9 @@
-package com.benromberg.cryptomato;
+package com.benromberg.cryptomato.web;
 
+import com.benromberg.cryptomato.RequestHandler;
+import com.benromberg.cryptomato.web.view.ColdstartResponse;
+import com.benromberg.cryptomato.web.view.TimestampTokenRequest;
+import com.benromberg.cryptomato.web.view.TimestampTokenResponse;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.benromberg.cryptomato;
+package com.benromberg.cryptomato.web.provider;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
