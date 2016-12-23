@@ -3,16 +3,16 @@ package com.benromberg.cryptomato.web;
 import com.benromberg.cryptomato.core.JsonMapper;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.google.inject.Guice;
-import com.jrestless.aws.gateway.GatewayResourceConfig;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.jersey.ServiceLocatorProvider;
+import org.glassfish.jersey.server.ResourceConfig;
 import org.jvnet.hk2.guice.bridge.api.GuiceBridge;
 import org.jvnet.hk2.guice.bridge.api.GuiceIntoHK2Bridge;
 
 import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
 
-public class JerseyResourceConfig extends GatewayResourceConfig {
+public class JerseyResourceConfig extends ResourceConfig {
     public JerseyResourceConfig() {
         register(createJsonProvider());
         register(GuiceFeature.class);
